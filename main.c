@@ -1,26 +1,15 @@
 #include <stdio.h>
-#include "maps.h"
-// Text based Role Playing Game
-
+#include "player_classes.h"
+/*
+A text based rpg game consisting of a user defined character whose stretgths and weaknesses are unique.
+The character progresses through the story and encounters enemies, friends and puzzles.
+An integral part of the story is the choices the character makes. Game proceeds depending on it.
+*/
 int main(void)
-{   int f;
-    Player one;
-    printf("Main menu\n");
-    printf("Press 1 to start game\n");
-    printf("Press 2 to end game\n");
-    scanf("%d",&f);
+{
 
-    if(f==1)
-       {
-        while(f){
-            one=map1(one);
-            if(one.health==0)
-               {
-                f--;
-                printf("You have been slain\n");
-               }
-        }
-       }
+   main_menu();
+
 
     return 0;
 
