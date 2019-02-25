@@ -1,11 +1,19 @@
 # depslib dependency file v1.0
-1551034067 source:d:\miniproject2\miniproject2\maps.c
+1551118545 source:d:\miniproject2\miniproject2\maps.c
 	<stdio.h>
 	"maps.h"
 
-1551034306 d:\miniproject2\miniproject2\maps.h
+1551118590 d:\miniproject2\miniproject2\maps.h
 
-1551034317 source:d:\miniproject2\miniproject2\main.c
+1551118545 source:d:\miniproject2\miniproject2\main.c
 	<stdio.h>
 	"maps.h"
+
+1551118006 source:d:\miniproject2\miniproject2\enemies.c
+	<stdio.h>
+	<string.h>
+	"enemies.h"
+	"maps.h"
+
+1551118042 d:\miniproject2\miniproject2\enemies.h
 
