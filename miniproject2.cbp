@@ -34,10 +34,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="maps.c">
+		<Unit filename="player_classes.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="maps.h" />
+		<Unit filename="player_classes.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

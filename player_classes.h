@@ -13,13 +13,13 @@ typedef struct myClass{
 typedef struct characters {
   char name[20];
   myClasses class;
-  int level;
-  int exp;
-  int atk;
-  int health;
+  int  level;                 //Made traits into static for declaration only once
+  int  exp;
+  int completion_percentage;
   int j;
 
 }character;
+//Game Story structure
 
 myClasses selectChar(int choice);
 character makeChar();
@@ -27,12 +27,19 @@ void main_menu();
 void game_start();
 
 typedef struct enemy{
-    float health,level,lifebars,mana,strength;
+    float health,level,lifebars,mana,strength;      //Made traits into static for declaration only once
     int j;            // j is a variable used to differ between normal and magic attacks.
     char *bossname,*race;
 }bot;
+typedef struct game_story{
+    character hero;
+    bot boss;
+
+}story;
+
 
 bot spawn(float rate);
 bot damage(character hero,bot king);
 character attack(character hero,bot king);
+character encounter(character hero);
 
