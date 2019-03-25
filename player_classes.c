@@ -393,7 +393,7 @@ void main_menu(){
 bot spawn(float rate)           //rate is based on random function mechanics to be defined later.
 {   bot enemy;
     enemy.bossname="Meliodas";                           //final boss map 1 will have rate 1.
-    enemy.health=400*rate;                               //boss has been defined for map 1.
+    enemy.health=300*rate;                               //boss has been defined for map 1.
    // enemy.lifebars=4;                                    //Minions of boss have rate less than 1.
     //enemy.level=15*rate;
     enemy.race="Demon";
