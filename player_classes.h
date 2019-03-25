@@ -29,11 +29,11 @@ typedef struct enemy{
     int j;            // j is a variable used to differ between normal and magic attacks.
     char *bossname,*race;
 }bot;
-typedef struct game_story{
+/*typedef struct game_story{
     character hero;
     bot boss;
 
-}story;
+}story;*/
 
 
 bot spawn(float rate);

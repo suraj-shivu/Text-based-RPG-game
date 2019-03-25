@@ -189,16 +189,16 @@ void level1(character hero){
         printf("You have challenged the creatures, or lemoids, as they called themselves to a basic duel. Five of them come forward to batter you to death.\n");
         system("pause");
         hero=encounter(hero, 0.7);
-        printf("Creature 2 comes forward\n");
+        printf("Creature 2 comes forward");
         system("pause");
         hero=encounter(hero,0.7);
-        printf("Creature 3 comes forward\n");
+        printf("Creature 3 comes forward");
         system("pause");
         hero=encounter(hero,0.7);
-        printf("Creature 4 comes forward\n");
+        printf("Creature 4 comes forward");
         system("pause");
         hero=encounter(hero,0.7);
-        printf("Creature 5 comes forward\n");
+        printf("Creature 5 comes forward");
         system("pause");
         hero=encounter(hero,0.7);
         printf("The five lemoids have fainted and cannot battle any more\n");
@@ -221,9 +221,9 @@ void level1(character hero){
     printf("You proceed deeper along the path, the volcano coming into clear view now \n");
     printf("You feel unsure about this, whether coming into the cursed place was a good idea from the beginning\n");
     printf("You are, however, motivated by your goal of clearing the path and stroll on......");
-    system("pause");
     hero.level=2;
     hero=level_2(hero);
+    game_over(hero);
 
 }
 character level_2(character player)
@@ -243,6 +243,7 @@ character level_2(character player)
         }
         printf("Melius has been injured in the battle and cannot continue\n, He provides you a health increase potion as he retreates \n.");
         player.class.health=temp+300;
+        system("pause");
         system("cls");
         printf("The Demon King, Meliodas , has teleported in front of you!!\n ");
         printf("Meliodas:You there! Have you seen my son?\n");
@@ -276,6 +277,7 @@ character level_2(character player)
         printf("You have received the token of hope\n.Your health and attack increase by 120 and 30\n");
         player.class.health+=120;
         player.class.attack+=30;
+        system("pause");
         system("cls");
         printf("A mist of blood appears out of nowhere\n");
         printf("The Demon king has appeared!!\n");
@@ -390,9 +392,9 @@ void main_menu(){
 bot spawn(float rate)           //rate is based on random function mechanics to be defined later.
 {   bot enemy;
     enemy.bossname="Meliodas";                           //final boss map 1 will have rate 1.
-    enemy.health=200*rate;                               //boss has been defined for map 1.
-    enemy.lifebars=4;                                    //Minions of boss have rate less than 1.
-    enemy.level=15*rate;
+    enemy.health=400*rate;                               //boss has been defined for map 1.
+   // enemy.lifebars=4;                                    //Minions of boss have rate less than 1.
+    //enemy.level=15*rate;
     enemy.race="Demon";
     enemy.mana=150*rate;
     enemy.strength=80*rate;
