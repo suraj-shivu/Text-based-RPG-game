@@ -189,16 +189,16 @@ void level1(character hero){
         printf("You have challenged the creatures, or lemoids, as they called themselves to a basic duel. Five of them come forward to batter you to death.\n");
         system("pause");
         hero=encounter(hero, 0.7);
-        printf("Creature 2 comes forward");
+        printf("Creature 2 comes forward\n");
         system("pause");
         hero=encounter(hero,0.7);
-        printf("Creature 3 comes forward");
+        printf("Creature 3 comes forward\n");
         system("pause");
         hero=encounter(hero,0.7);
-        printf("Creature 4 comes forward");
+        printf("Creature 4 comes forward\n");
         system("pause");
         hero=encounter(hero,0.7);
-        printf("Creature 5 comes forward");
+        printf("Creature 5 comes forward\n");
         system("pause");
         hero=encounter(hero,0.7);
         printf("The five lemoids have fainted and cannot battle any more\n");
@@ -221,6 +221,7 @@ void level1(character hero){
     printf("You proceed deeper along the path, the volcano coming into clear view now \n");
     printf("You feel unsure about this, whether coming into the cursed place was a good idea from the beginning\n");
     printf("You are, however, motivated by your goal of clearing the path and stroll on......");
+    system("pause");
     hero.level=2;
     hero=level_2(hero);
 
