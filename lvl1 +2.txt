@@ -1,0 +1,57 @@
+1)Hero starts off in hell and encounters a demon at the starting itself
+2)After fight is over,hero looks upon the gloomy world
+
+3)Suddenly player looks at an npc battling a demon
+	Player is presented with 2 choices  : 
+
+		1)Join to attack
+		2)Leave NPC to die
+
+	if 1) then player gets a heal+health increase by the npc, npc tells about hellworld and boss demon meliodas and him killing the npcs family,he says he came here to avenge himself
+	,then fucks offf
+	if 2) then demon kills npc, turns after player. If player manages to kill demon, he gets a potion which increases his attack by 5
+
+4)Player enters an arena with demons fighting against each other 
+	Player can 1) join the arena, slay some weak demons and get an award(heal + health increase).
+		   2) leave off
+START LVL2;
+
+----save-------
+
+LVL2
+
+5)Meliodas's son is found strolling by having cuts and bruises, when player asks he says Meliodas is going on a rampage and killed his extended family 
+6)Player can now : 
+		1. Go with melius to stop his rampaging father
+		2. Go alone and proceed(melius gives player a token of good luck ie a health boost)
+
+7)put random enemies in the path, melius is too hurt to help(if player chooses 3)
+
+8)Meliodas suddenly teleports near player and looks upon player(and son if 3)
+	if 1) was chosen before : 
+	meliodas asks player if he's seen his son : 
+		player can 1) lie
+			   2) tell the truth
+	
+		if player tells truth meliodas, meliodas fucks off and allows player to proceed the path(ENTER LEVEL 2)
+
+		if player lies : 
+			meliodas finds out player lied and thinks player has harmed his son
+			Battle start
+			if victory(LVL 3 ) 
+	
+
+	if 2) was chosen before : 
+	player and melius go along path and finds meliodas devouring other lesser demons
+		melius confronts his father, and he dosent recognize him consumed with rage
+		CUE THE DRAMA
+		BATTLE STarts
+		Melius helps along the player.
+		Melius gives support to player as a healer and atk boost.
+		When meliodas dies , melius goes to bury his father and bids farewell to the player.
+
+		START LVL 3 .
+
+
+
+
