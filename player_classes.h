@@ -39,5 +39,10 @@ typedef struct game_story{
 bot spawn(float rate);
 bot damage(character hero,bot enemy);
 character attack(character hero,bot enemy);
-character encounter(character hero);
+character encounter(character hero,float mod);
 float ranGen();
+void level1(character hero);
+character level_2(character player);
+character boss_encounter(character player);
+character boss_attack(character player,bot boss);
+void game_over(character hero);
