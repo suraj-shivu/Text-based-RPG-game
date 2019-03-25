@@ -14,8 +14,6 @@ typedef struct characters {
   char name[20];
   myClasses class;
   int  level;                 //Made traits into static for declaration only once
-  int  exp;
-  int completion_percentage;
   int j;
 
 }character;
@@ -39,7 +37,7 @@ typedef struct game_story{
 
 
 bot spawn(float rate);
-bot damage(character hero,bot king);
-character attack(character hero,bot king);
+bot damage(character hero,bot enemy);
+character attack(character hero,bot enemy);
 character encounter(character hero);
-
+float ranGen();
