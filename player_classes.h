@@ -22,7 +22,7 @@ typedef struct characters {
 myClasses selectChar(int choice);
 character makeChar();
 void main_menu();
-void game_start();
+void game_start(int n);
 
 typedef struct enemy{
     float health,level,lifebars,mana,strength;      //Made traits into static for declaration only once
@@ -46,3 +46,6 @@ character level_2(character player);
 character boss_encounter(character player);
 character boss_attack(character player,bot boss);
 void game_over(character hero);
+void game_save(character hero,int level);
+character game_load(char *ch_name);
+

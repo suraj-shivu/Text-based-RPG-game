@@ -112,20 +112,38 @@ character makeChar(){
 
   }
 
-void game_start(){
+void game_start(int n){
 
-
-    character hero;
-    hero = makeChar();
-
-    printf("You have entered Hell.\n The place is dark, gloomy and has a distinct shade of red everywhere.\n The world is yours to explore\n");
-    system("pause");
-    level1(hero);
+// new game if 0 and loads game if 1
+    if(n==0){
+        character hero;
+        hero = makeChar();
+        game_save(hero,1);
+        level1(hero);
 
     }
+    if(n==1){
+        character hero;
+        char s[20];
+        printf("Enter character name : \n");
+        scanf("%s",s);
+        hero = game_load(s);
+        if(hero.level==1){
+            level1(hero);
+        }
+        if(hero.level==2){
+            level_2(hero);
+        }
+
+    }
+}
 
 void level1(character hero){
+    hero.level = 1;
+    game_save(hero,1);
     int choices[2];
+    printf("You have entered Hell.\n The place is dark, gloomy and has a distinct shade of red everywhere.\n The world is yours to explore\n");
+    system("pause");
     printf("You see a narrow path going over to a distinctly visible volcano.\n ");
     printf("Upon entering this barren path, a demon jumps out of nowhere. It seems it hasn't eaten for days \n");
     system("pause");
@@ -229,6 +247,8 @@ void level1(character hero){
 }
 character level_2(character player)
 {   int n;
+    player.level = 2;
+    game_save(player,2);
     system("cls");
     printf("As you leave the Arena you see someone approaching\n.You see a ragged and wounded person approach you.\n");
     system("pause");
@@ -377,7 +397,7 @@ void main_menu(){
   printf("------------------------------------------ \n");
 
   printf("Main Menu \n");
-  printf("1. New game \n0. Exit\n");
+  printf("1. New game \n2.Load Game\n0. Exit\n");
 
   scanf("%d",&menu_choice);
   if(menu_choice == 0){
@@ -385,7 +405,12 @@ void main_menu(){
   }
   if(menu_choice ==1){
     printf("Entering new game .........\n");
-    game_start();
+    game_start(0);
+  }
+  if(menu_choice ==2){
+    printf("Loading game....");
+    game_start(1);
+
   }
 
 
@@ -505,5 +530,50 @@ float ranGen(){
   srand(time(0));
   return (rand() % (100) + 1)/100.0;
 
+}
+/*File will have this format after saving:
+
+        level name health defense intellect luck attack j-value
+
+*/
+void game_save(character hero,int level){
+    FILE *save_file;
+    char name[20] = "Saves\\";
+
+    char *q = strcat(name,hero.name);
+    char extension[] = ".txt";
+    char *p = strcat(q,extension);
+    save_file = fopen(p,"w");
+    fprintf(save_file,"%d %d %d %d %d %d %d ",level,hero.class.health,hero.class.defense,hero.class.intellect,hero.class.luck,hero.class.attack,hero.j);
+    fclose(save_file);
+
+}
+
+
+character game_load(char *ch_name){
+    FILE *load_file;
+    character hero;
+    char temp[20] = "Saves\\";
+    char *p;
+    p = strcat(temp,ch_name);
+    char *q = strcat(p,".txt");
+
+    load_file = fopen(q,"r");
+
+    fscanf(load_file,"%d %d %d %d %d %d %d ",&hero.level,&hero.class.health,&hero.class.defense,&hero.class.intellect,&hero.class.luck,&hero.class.attack,&hero.j);
+
+    strcpy(hero.name,ch_name);
+
+        printf("Class attributes : \n");
+        printf("Health : %d \n",hero.class.health);
+        printf("Defense : %d \n",hero.class.defense);
+        printf("Intellect : %d \n",hero.class.intellect);
+        printf("Luck : %d \n",hero.class.luck);
+        printf("Attack : %d \n",hero.class.attack);
+        printf("Name  : %s\n",hero.name);
+        printf("Level : %d\n",hero.level);
+        printf("\n");
+        fclose(load_file);
+    return hero;
 
 }
